@@ -1,0 +1,61 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.crunchtime.com/docs/getting-started-with-apis
+docs: https://developer.crunchtime.com/docs/getting-started-with-apis
+description: >-
+  Crunchtime Inventory & Labor APIs authenticate with a per-environment API
+  authentication token issued from Enterprise Manager, sent together with the
+  customer site name, application user id and password. Tokens are scoped per
+  environment (separate Test and Production tokens); a single token can access
+  multiple API services within its environment, and grants access to data for
+  all locations associated with that application user's Crunchtime site. There is
+  no OAuth 2.0 / OpenID Connect flow and no scope surface — this is a token +
+  named-application-user model, so no scopes/ artifact is emitted.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  oauth2_flows: []
+schemes:
+- name: authenticationtoken
+  type: apiKey
+  in: header
+  parameter: authenticationtoken
+  description: >-
+    Per-environment (Test or Production) API token generated and managed in
+    Enterprise Manager under Security > Application Users > API Tokens. Token
+    value is shown only once at creation; can be regenerated or revoked. Tokens
+    do not carry OAuth scopes.
+  sources:
+  - https://developer.crunchtime.com/docs/getting-started-with-apis
+- name: sitename
+  type: apiKey
+  in: field
+  parameter: sitename
+  description: >-
+    The Crunchtime site identifier — the portion of the customer URL before
+    ".net-chef.com" (e.g. "eattacos" for eattacos.net-chef.com, "eattacos-test"
+    for the test environment). Combined with the token to select the environment.
+  sources:
+  - https://developer.crunchtime.com/docs/getting-started-with-apis
+- name: userid
+  type: apiKey
+  in: field
+  parameter: userid
+  description: Application User ID of a dedicated Crunchtime application user (e.g. "API User").
+  sources:
+  - https://developer.crunchtime.com/docs/getting-started-with-apis
+- name: password
+  type: apiKey
+  in: field
+  parameter: password
+  description: Password for the Crunchtime application user.
+  sources:
+  - https://developer.crunchtime.com/docs/getting-started-with-apis
+notes:
+  environments:
+    test: https://webservices-test.net-chef.com
+    production: https://webservices.net-chef.com
+  token_management: Enterprise Manager > Security > Application Users > API Tokens (add/edit/regenerate/revoke)
+  support: apiquestions@crunchtime.com
