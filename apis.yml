@@ -1,9 +1,32 @@
 aid: crunchtime
 name: Crunchtime
-description: Crunchtime is a company surfaced as a portfolio company of battery-ventures and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Crunchtime (CrunchTime! Information Systems) is an AI-powered restaurant operations
+  management platform used by 850+ multi-unit restaurant brands across 150,000+
+  locations to run inventory and food-cost control, labor and scheduling, operations
+  execution (tasks, audits, temperature and food-prep labeling), kitchen display
+  (KDS), guest/host-stand management, learning & development, and operational
+  intelligence (Crunchtime Insights and Data Streaming). For integrators, Crunchtime
+  publishes the Inventory & Labor developer hub — a REST/JSON API of 150+ operations
+  (employees, locations, budgets, recipes, purchase orders, inventory counts,
+  schedules, sales/menu-mix and more) served from the net-chef.com web services,
+  authenticated with per-environment API tokens plus a site name and application
+  user. The company merged with QSR Automations to cover the full restaurant food
+  lifecycle and is a Battery Ventures portfolio company.
 url: https://raw.githubusercontent.com/api-evangelist/crunchtime/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.crunchtime.com/hubfs/2026-Crunchtime-Suite-ftr_@2x.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,12 +35,100 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Restaurant Operations
+- Inventory Management
+- Labor & Scheduling
+- Food Cost
+- Kitchen Display
+- Point of Sale
+- Supply Chain
+- Hospitality
+- REST API
+apis:
+- aid: crunchtime:crunchtime-inventory-labor-api
+  name: Crunchtime Inventory & Labor API
+  description: >-
+    The Crunchtime Inventory & Labor API is a REST/JSON web-services API for
+    integrating restaurant back-office data with the Crunchtime platform. It exposes
+    150+ operations organized by functional area — Employees/Locations/Users,
+    Financial Operations, Inventory, Labor & scheduling, Point-of-Sale / Sales
+    (menu mix), Vendors/Purchasing, and other services — each following a
+    get-all / get-by-page / save pattern. Requests are authenticated with a
+    per-environment authentication token together with the customer site name,
+    application user id and password, and are served from the net-chef.com web
+    services host (separate test and production hosts).
+  humanURL: https://developer.crunchtime.com/docs/introduction
+  baseURL: https://webservices.net-chef.com
+  tags:
+  - Inventory
+  - Labor
+  - Scheduling
+  - Purchasing
+  - Recipes
+  - Point of Sale
+  - Restaurant
+  properties:
+  - url: https://developer.crunchtime.com/docs/introduction
+    type: Documentation
+  - url: https://developer.crunchtime.com/reference
+    type: APIReference
+  - url: https://developer.crunchtime.com/docs/getting-started-with-apis
+    type: GettingStarted
+  - url: https://developer.crunchtime.com/docs/whats-new-on-the-developer-hub
+    type: ChangeLog
+  - url: https://developer.crunchtime.com/docs/api-faqs
+    type: Support
+common:
+- url: https://developer.crunchtime.com/
+  type: DeveloperPortal
+- url: https://developer.crunchtime.com/docs/introduction
+  type: Documentation
+- url: https://developer.crunchtime.com/reference
+  type: APIReference
+- url: https://developer.crunchtime.com/docs/getting-started-with-apis
+  type: GettingStarted
+- url: https://crunchtime.zendesk.com/hc/en-us
+  type: Support
+- url: https://www.crunchtime.com/blog
+  type: Blog
+- url: https://www.crunchtime.com/request-demo
+  type: SignUp
+- url: https://www.crunchtime.com/terms
+  type: TermsOfService
+- url: https://www.crunchtime.com/privacy-policy
+  type: PrivacyPolicy
+- url: https://www.crunchtime.com/security
+  type: Compliance
+- url: llms/crunchtime-llms.txt
+  type: LLMsTxt
+- url: authentication/crunchtime-authentication.yml
+  type: Authentication
+- url: conventions/crunchtime-conventions.yml
+  type: Conventions
+- url: errors/crunchtime-problem-types.yml
+  type: ErrorCatalog
+- url: rate-limits/crunchtime-rate-limits.yml
+  type: RateLimits
+- url: lifecycle/crunchtime-lifecycle.yml
+  type: Lifecycle
+- url: lifecycle/crunchtime-lifecycle.yml
+  type: Deprecation
+- url: changelog/crunchtime-changelog.yml
+  type: ChangeLog
+- url: conformance/crunchtime-conformance.yml
+  type: Conformance
+- url: security/crunchtime-domain-security.yml
+  type: DomainSecurity
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

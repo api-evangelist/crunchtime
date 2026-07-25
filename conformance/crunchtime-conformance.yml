@@ -1,0 +1,44 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://www.crunchtime.com/security (compliance posture) and the developer hub
+  docs (API conventions). Standards assertions are derived from documented
+  behavior; compliance certifications are searched from the security page.
+description: >-
+  Conformance posture for Crunchtime. The company publishes SOC 2 Type 2 audits
+  across all products and SOC 1 Type 2 audits for the Inventory and Labor
+  products. The Inventory & Labor API is a REST/JSON API using a token-based
+  auth model (no OAuth2/OIDC) and standard HTTP status codes (no RFC 9457
+  problem+json envelope).
+compliance:
+  published: true
+  source: https://www.crunchtime.com/security
+  certifications:
+  - name: SOC 2 Type 2
+    scope: all products
+  - name: SOC 1 Type 2
+    scope: Inventory and Labor products
+standards:
+- id: rest-json
+  conforms: true
+  evidence: REST over HTTPS with JSON request/response bodies (developer hub docs).
+- id: oauth2
+  conforms: false
+  evidence: Token + application-user credential model; no OAuth 2.0 flow documented.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Standard HTTP status codes documented; no application/problem+json envelope.
+- id: rfc6585-429
+  conforms: true
+  evidence: Returns HTTP 429 Too Many Requests when the per-site rate limit is exceeded.
+- id: pagination
+  conforms: true
+  evidence: getByPage endpoints with pageNumber and default page size.
+- id: soc2-type2
+  conforms: true
+  evidence: SOC 2 Type 2 audits across all products (security page).
+- id: soc1-type2
+  conforms: true
+  evidence: SOC 1 Type 2 audits for Inventory and Labor products (security page).

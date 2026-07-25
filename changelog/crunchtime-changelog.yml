@@ -1,0 +1,55 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.crunchtime.com/docs/whats-new-on-the-developer-hub
+description: >-
+  Crunchtime publishes dated API changes on the developer hub's "What's New"
+  page. Entries carry an update date, the affected API service, a description of
+  the change, and a date-based service version. Recent window captured below.
+scheme: date-based service version (YY.MM.DD form, e.g. 20.26.07.02)
+current_version: 20.26.07.02
+changelog_url: https://developer.crunchtime.com/docs/whats-new-on-the-developer-hub
+entries:
+- date: '2026-07-14'
+  service: Company Product Enhanced Service
+  version: 20.26.07.02
+  breaking: false
+  highlights: >-
+    Limited the minutesSinceUpdate GET param to a maximum of 1 month; added a
+    system setting capping the maximum items returned at 50,000.
+- date: '2026-07-10'
+  service: Vendor Location Service
+  version: 20.26.07.01 (Cruise Patch)
+  breaking: false
+  highlights: Made this API available for Cruise Lines.
+- date: '2026-07-07'
+  service: Supplemental Wage Service
+  version: 20.26.06.25
+  breaking: false
+  highlights: >-
+    Adjusted Daily Lump Sum Value validation ranges (>= 0.00 and <= 99,999.99;
+    Tip Credit Eligible entries allow negative values to -99,999.99), max 2 decimals.
+- date: '2026-06-30'
+  service: Multiple services
+  version: 20.26.06.18 / 20.26.07.01
+  breaking: false
+  highlights: Developer hub updates across services.
+- date: '2026-05-05'
+  service: Multiple services
+  version: 20.26.04.23
+  breaking: false
+  highlights: Developer hub updates.
+- date: '2026-04-28'
+  service: Multiple services
+  version: 20.26.04.16
+  breaking: false
+  highlights: Developer hub updates.
+- date: '2026-04-21'
+  service: Multiple services
+  version: 20.26.04.09
+  breaking: false
+  highlights: Developer hub updates.
+- date: '2026-04-07'
+  service: Multiple services
+  version: 20.26.03.05
+  breaking: false
+  highlights: Developer hub updates.

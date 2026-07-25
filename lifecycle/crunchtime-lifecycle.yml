@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://developer.crunchtime.com/docs/usage-guidelines (Terms of Usage) and
+  https://developer.crunchtime.com/docs/whats-new-on-the-developer-hub
+description: >-
+  Crunchtime versions its Inventory & Labor APIs with a date-based service
+  version and publishes changes on the developer hub's "What's New" page. It
+  documents an explicit deprecation policy: at least 30 days' notice before
+  changing or removing existing endpoints or fields, and commercially reasonable
+  support of the previous version for at least 6 months.
+versioning:
+  scheme: date-based service version (e.g. 20.26.07.02)
+  changelog: https://developer.crunchtime.com/docs/whats-new-on-the-developer-hub
+deprecation:
+  policy: >-
+    Crunchtime may change or remove existing endpoints or fields upon at least
+    30 days' notice to the customer, and will use commercially reasonable efforts
+    to support the previous version for at least 6 months. New endpoints or fields
+    may be added without prior notice.
+  notice_days: 30
+  prior_version_support_months: 6
+  policy_url: https://developer.crunchtime.com/docs/usage-guidelines
+sla:
+  documented: false
+  notes: No public uptime SLA or numeric availability target was found for the API.
+status_page:
+  found: false
+  notes: No public status page (e.g. status.crunchtime.com) was located.
+deprecated_operations: []

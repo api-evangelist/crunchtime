@@ -1,0 +1,49 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+generated: '2026-07-18'
+method: searched
+provider: Crunchtime
+providerId: crunchtime
+created: '2026-07-18'
+modified: '2026-07-18'
+tags:
+- Rate Limiting
+- Restaurant Operations
+description: >-
+  Crunchtime Inventory & Labor APIs enforce a per-site/route usage limit of 500
+  API calls within any 5-second window; exceeding it returns HTTP 429 until usage
+  subsides. Requests count toward the limit regardless of success or failure.
+  Additional structural limits govern batch save size, list ceilings, page size,
+  and request timeouts.
+sources:
+- https://developer.crunchtime.com/docs/usage-guidelines
+responseCodes:
+  throttled: 429
+limits:
+- name: Per site/route request rate
+  scope: site
+  metric: requests_per_5s
+  limit: 500
+  window_seconds: 5
+  notes: >-
+    Up to 500 API calls per 5-second period per customer site/route across all
+    APIs. Requests count regardless of outcome; over the limit returns HTTP 429.
+- name: Save batch size
+  scope: request
+  metric: records_per_save
+  limit: 50
+  notes: The "Save" feature processes up to 50 records per request, each with per-record success/failure feedback.
+- name: List ceiling
+  scope: request
+  metric: records_per_list
+  limit: 500000
+  notes: The "List" (getAll) feature has a hard limit of 500k records; some APIs implement a lower custom limit.
+- name: Page size default
+  scope: request
+  metric: records_per_page
+  limit: 10
+  notes: The "Page" (getByPage) feature defaults to 10 records per page.
+timeouts:
+  request_seconds: 10
+  connect_seconds: 4
+  response_code: 504

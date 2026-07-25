@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+description: >-
+  Probe of the /.well-known/ discovery surface on Crunchtime's developer and API
+  hosts. No well-known discovery documents were served (all 404). Recorded as an
+  honest negative result — no WellKnown/SecurityTxt pointer is wired.
+hosts:
+- host: https://developer.crunchtime.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+- host: https://www.crunchtime.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://webservices.net-chef.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404

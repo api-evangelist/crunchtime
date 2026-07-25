@@ -1,0 +1,14 @@
+{
+  "repo": "crunchtime",
+  "feeds": [
+    {
+      "source": "https://www.crunchtime.com/blog",
+      "feed_url": "https://www.crunchtime.com/blog/rss.xml",
+      "title": "",
+      "saved": 2,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 2,
+  "fetched": "2026-07-20T13:31:34Z"
+}

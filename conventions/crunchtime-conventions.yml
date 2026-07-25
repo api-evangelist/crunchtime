@@ -1,0 +1,73 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://developer.crunchtime.com/docs/using-apis and
+  https://developer.crunchtime.com/docs/usage-guidelines — the cross-cutting
+  request/response conventions that apply across every Crunchtime Inventory &
+  Labor API operation.
+description: >-
+  How Crunchtime's Inventory & Labor REST APIs behave across every operation:
+  token-based authentication with a site name, JSON request/response bodies, the
+  getAll vs getByPage retrieval pattern, batch save semantics, rate-limit
+  signaling, environment (test/production) separation and guard, and the
+  deprecation/versioning policy. Cross-links authentication/, errors/,
+  rate-limits/, and lifecycle/.
+base_url:
+  production: https://webservices.net-chef.com
+  test: https://webservices-test.net-chef.com
+api_style: REST over HTTPS, JSON request and response bodies
+authentication:
+  scheme: >-
+    Per-environment API authentication token (header authenticationtoken) plus
+    site name, application user id and password. See authentication/crunchtime-authentication.yml.
+  docs: https://developer.crunchtime.com/docs/getting-started-with-apis
+environments:
+  separation: Separate Test and Production tokens and hosts; a token is bound to one environment.
+  guard: >-
+    Requests to a "-test" endpoint are validated against a matching "-test" site
+    name; a mismatch is blocked and returns an error, preventing accidental writes
+    to production.
+retrieval_pattern:
+  getAll:
+    description: Targeted queries; requires query parameters to constrain the result set.
+    list_limit: 500000
+  getByPage:
+    description: Paged retrieval for large datasets; does not require the getAll query parameters.
+    default_page_size: 10
+    param: pageNumber
+  guidance: Limit your process to a single active download at a time for data stability.
+save_semantics:
+  method: POST
+  behavior: Create or update in the same call based on whether the referenced record exists.
+  batch_size: 50
+  feedback: Per-record success/failure returned within the response.
+  referential_integrity: >-
+    Referenced entities (e.g. Locations, Positions for an Employee) must already
+    exist and match exactly; the API will not create referenced records.
+pagination:
+  style: page-number
+  request_param: pageNumber
+  default_page_size: 10
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header or contract is documented. Save operations are
+    create-or-update by record identity rather than idempotent replays.
+rate_limiting:
+  limit: 500 requests per 5-second window per site/route
+  response_code: 429
+  counts_all_requests: true
+  details: rate-limits/crunchtime-rate-limits.yml
+error_envelope:
+  format: HTTP status codes; JSON body with per-record results on save
+  details: errors/crunchtime-problem-types.yml
+versioning:
+  scheme: date-based service version (e.g. 20.26.07.02); tracked on the What's New / developer hub
+  deprecation_policy: >-
+    At least 30 days' notice before changing or removing existing endpoints or
+    fields; commercially reasonable support of the previous version for at least
+    6 months. New endpoints/fields may be added without prior notice.
+  details: lifecycle/crunchtime-lifecycle.yml
+data_exchange_alternatives:
+  flat_file: Crunchtime Data Pump (CDP) batch flat-file processing as an alternative to the real-time APIs.
+support: apiquestions@crunchtime.com

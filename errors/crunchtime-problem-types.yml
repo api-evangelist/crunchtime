@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.crunchtime.com/docs/usage-guidelines
+format: http-status
+description: >-
+  Crunchtime Inventory & Labor APIs return standard HTTP status codes to signal
+  request outcomes. There is no documented RFC 9457 application/problem+json
+  envelope; save operations return per-record success/failure feedback within a
+  JSON response body. The status codes below are the documented response set.
+problems:
+- status: 200
+  title: Success
+- status: 206
+  title: Partial Response
+- status: 207
+  title: Partial Success
+  description: Multi-record save where some records succeeded and some failed.
+- status: 400
+  title: Validation Error
+- status: 401
+  title: Authorization Error
+  description: Missing/invalid authentication token, site name, or application-user credentials.
+- status: 404
+  title: Data Not Found
+- status: 429
+  title: Too Many Requests
+  description: Per-site/route rate limit exceeded (500 calls per 5-second window). Retry after usage subsides.
+- status: 500
+  title: Unexpected
+- status: 503
+  title: System Under Maintenance
+- status: 504
+  title: Timeout
+  description: Processing exceeded the 10-second request limit or the 4-second connect timeout.
