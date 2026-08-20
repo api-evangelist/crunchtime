@@ -43,6 +43,17 @@ tags:
 - Labor & Scheduling
 - Food Cost
 - Kitchen Display
+- Point-of-Sale
+- Supply Chain
+- Hospitality
+- REST API
+tags_raw:
+- Company
+- Restaurant Operations
+- Inventory Management
+- Labor & Scheduling
+- Food Cost
+- Kitchen Display
 - Point of Sale
 - Supply Chain
 - Hospitality
@@ -63,6 +74,14 @@ apis:
   humanURL: https://developer.crunchtime.com/docs/introduction
   baseURL: https://webservices.net-chef.com
   tags:
+  - Inventory
+  - Labor
+  - Scheduling
+  - Purchasing
+  - Recipes
+  - Point-of-Sale
+  - Restaurant
+  tags_raw:
   - Inventory
   - Labor
   - Scheduling
