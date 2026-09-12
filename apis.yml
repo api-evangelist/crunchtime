@@ -114,6 +114,8 @@ apis:
   - url: https://developer.crunchtime.com/docs/api-faqs
     type: Support
 common:
+- type: Website
+  url: https://www.crunchtime.com/
 - url: https://developer.crunchtime.com/
   type: DeveloperPortal
 - url: https://developer.crunchtime.com/docs/introduction
