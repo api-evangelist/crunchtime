@@ -49,10 +49,13 @@ x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-18'
+x-docs-platform: readme
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-09-24
 tags:
 - Company
 - Restaurant Operations
-- Inventory Management
+- Inventory
 - Labor & Scheduling
 - Food Cost
 - Kitchen Display
@@ -60,6 +63,7 @@ tags:
 - Supply Chain
 - Hospitality
 - REST API
+- Food and Beverage
 tags_raw:
 - Company
 - Restaurant Operations
@@ -71,6 +75,7 @@ tags_raw:
 - Supply Chain
 - Hospitality
 - REST API
+- Food and Beverage
 apis:
 - aid: crunchtime:crunchtime-inventory-labor-api
   name: Crunchtime Inventory & Labor API
