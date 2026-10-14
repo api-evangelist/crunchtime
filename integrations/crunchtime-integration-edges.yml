@@ -1,5 +1,5 @@
 generated: '2026-10-14'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/crunchtime/integrations
 - https://n8n.io/integrations/crunchtime/
@@ -10,7 +10,43 @@ checked:
 - https://monid.ai/tools/crunchtime
 - https://n8n.io/integrations/crunchtime/
 - https://zapier.com/apps/crunchtime/integrations
+- olo/integrations/olo-integration-edges.yml
+- toast/integrations/toast-integration-edges.yml
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Olo (own)
+  partner: olo
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.olo.com/partners/crunchtime
+  mirror_of: olo/integrations/olo-integration-edges.yml
+  apps:
+  - Crunchtime
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Kitchen Display System
+- partner_name: Toast (own)
+  partner: toast
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://pos.toasttab.com/partners/directory/crunchtime
+  mirror_of: toast/integrations/toast-integration-edges.yml
+  apps:
+  - Crunchtime
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Labor
 templates: []
