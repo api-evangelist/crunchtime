@@ -1,19 +1,17 @@
 aid: crunchtime
+
 name: Crunchtime
-description: >-
-  Crunchtime (CrunchTime! Information Systems) is an AI-powered restaurant operations
-  management platform used by 850+ multi-unit restaurant brands across 150,000+
-  locations to run inventory and food-cost control, labor and scheduling, operations
-  execution (tasks, audits, temperature and food-prep labeling), kitchen display
-  (KDS), guest/host-stand management, learning & development, and operational
-  intelligence (Crunchtime Insights and Data Streaming). For integrators, Crunchtime
-  publishes the Inventory & Labor developer hub — a REST/JSON API of 150+ operations
-  (employees, locations, budgets, recipes, purchase orders, inventory counts,
-  schedules, sales/menu-mix and more) served from the net-chef.com web services,
-  authenticated with per-environment API tokens plus a site name and application
-  user. The company merged with QSR Automations to cover the full restaurant food
-  lifecycle and is a Battery Ventures portfolio company.
+
+description: Crunchtime (CrunchTime! Information Systems) is an AI-powered restaurant operations management platform used by 850+ multi-unit restaurant
+  brands across 150,000+ locations to run inventory and food-cost control, labor and scheduling, operations execution (tasks, audits, temperature
+  and food-prep labeling), kitchen display (KDS), guest/host-stand management, learning & development, and operational intelligence (Crunchtime
+  Insights and Data Streaming). For integrators, Crunchtime publishes the Inventory & Labor developer hub — a REST/JSON API of 150+ operations
+  (employees, locations, budgets, recipes, purchase orders, inventory counts, schedules, sales/menu-mix and more) served from the net-chef.com
+  web services, authenticated with per-environment API tokens plus a site name and application user. The company merged with QSR Automations to
+  cover the full restaurant food lifecycle and is a Battery Ventures portfolio company.
+
 url: https://raw.githubusercontent.com/api-evangelist/crunchtime/refs/heads/main/apis.yml
+
 deliveryModel:
   model: saas
   open_source: false
@@ -25,6 +23,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -39,19 +38,32 @@ accessModel:
   - security
   generated: '2026-09-03'
   method: derived
+
 image: https://www.crunchtime.com/hubfs/2026-Crunchtime-Suite-ftr_@2x.jpg
+
 x-type: company
+
 x-source: vc-portfolio
+
 x-backed-by:
 - battery-ventures
+
 x-tier: stub
+
 x-tier-reason: portfolio-lead
+
 specificationVersion: '0.23'
+
 created: '2026-07-17'
+
 modified: '2026-07-18'
+
 x-docs-platform: readme
+
 x-docs-platform-confidence: high
+
 x-docs-platform-checked: 2026-09-24
+
 tags:
 - Company
 - Restaurant Operations
@@ -64,6 +76,7 @@ tags:
 - Hospitality
 - REST API
 - Food and Beverage
+
 tags_raw:
 - Company
 - Restaurant Operations
@@ -76,49 +89,34 @@ tags_raw:
 - Hospitality
 - REST API
 - Food and Beverage
-apis:
-- aid: crunchtime:crunchtime-inventory-labor-api
-  name: Crunchtime Inventory & Labor API
-  description: >-
-    The Crunchtime Inventory & Labor API is a REST/JSON web-services API for
-    integrating restaurant back-office data with the Crunchtime platform. It exposes
-    150+ operations organized by functional area — Employees/Locations/Users,
-    Financial Operations, Inventory, Labor & scheduling, Point-of-Sale / Sales
-    (menu mix), Vendors/Purchasing, and other services — each following a
-    get-all / get-by-page / save pattern. Requests are authenticated with a
-    per-environment authentication token together with the customer site name,
-    application user id and password, and are served from the net-chef.com web
-    services host (separate test and production hosts).
-  humanURL: https://developer.crunchtime.com/docs/introduction
-  baseURL: https://webservices.net-chef.com
-  tags:
-  - Inventory
-  - Labor
-  - Scheduling
-  - Purchasing
-  - Recipes
-  - Point-of-Sale
-  - Restaurant
-  tags_raw:
-  - Inventory
-  - Labor
-  - Scheduling
-  - Purchasing
-  - Recipes
-  - Point of Sale
-  - Restaurant
-  properties:
-  - url: https://developer.crunchtime.com/docs/introduction
-    type: Documentation
-  - url: https://developer.crunchtime.com/reference
-    type: APIReference
-  - url: https://developer.crunchtime.com/docs/getting-started-with-apis
-    type: GettingStarted
-  - url: https://developer.crunchtime.com/docs/whats-new-on-the-developer-hub
-    type: ChangeLog
-  - url: https://developer.crunchtime.com/docs/api-faqs
-    type: Support
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+
 common:
+- type: AgenticAccess
+  url: agentic-access/crunchtime-agentic-access.yml
+- type: Spectral
+  url: rules/crunchtime-rules.yml
+- type: JSONLD
+  url: json-ld/crunchtime-context.jsonld
+- type: Vocabulary
+  url: vocabulary/crunchtime-vocabulary.yml
+- type: DataModel
+  url: data-model/crunchtime-data-model.yml
+- type: Hosts
+  url: hosts/crunchtime-hosts.yml
+- type: Vendors
+  url: vendors/crunchtime-vendors.yml
+- type: StatusPage
+  url: https://status.crunchtime.com/
+- type: Security
+  url: https://www.crunchtime.com/security
+- type: Newsroom
+  url: https://www.crunchtime.com/press
 - type: Website
   url: https://www.crunchtime.com/
 - url: https://developer.crunchtime.com/
@@ -161,13 +159,101 @@ common:
   type: Conformance
 - url: security/crunchtime-domain-security.yml
   type: DomainSecurity
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-- FN: APIs.json
-  email: info@apis.io
+
+apis:
+- aid: crunchtime:crunchtime-inventory-labor-api
+  name: Crunchtime Inventory & Labor API
+  description: The Crunchtime Inventory & Labor API is a REST/JSON web-services API for integrating restaurant back-office data with the Crunchtime
+    platform. It exposes 150+ operations organized by functional area — Employees/Locations/Users, Financial Operations, Inventory, Labor & scheduling,
+    Point-of-Sale / Sales (menu mix), Vendors/Purchasing, and other services — each following a get-all / get-by-page / save pattern. Requests
+    are authenticated with a per-environment authentication token together with the customer site name, application user id and password, and
+    are served from the net-chef.com web services host (separate test and production hosts).
+  humanURL: https://developer.crunchtime.com/docs/introduction
+  baseURL: https://webservices.net-chef.com
+  tags:
+  - Inventory
+  - Labor
+  - Scheduling
+  - Purchasing
+  - Recipes
+  - Point-of-Sale
+  - Restaurant
+  tags_raw:
+  - Inventory
+  - Labor
+  - Scheduling
+  - Purchasing
+  - Recipes
+  - Point of Sale
+  - Restaurant
+  properties:
+  - url: https://developer.crunchtime.com/docs/introduction
+    type: Documentation
+  - url: https://developer.crunchtime.com/reference
+    type: APIReference
+  - url: https://developer.crunchtime.com/docs/getting-started-with-apis
+    type: GettingStarted
+  - url: https://developer.crunchtime.com/docs/whats-new-on-the-developer-hub
+    type: ChangeLog
+  - url: https://developer.crunchtime.com/docs/api-faqs
+    type: Support
+- aid: crunchtime:crunchtime-cruise-platform
+  name: Crunchtime Application User Service API
+  description: The Application User service is used to create and retrieve user profiles where each user is assigned a unique User ID and password
+    for logging in to Enterprise Manager, Net-Chef, or the Teamworx Manager Console.   It links users to specific locations, hierarchies, customers
+    and markets, and assigns each user to a user group, which determines which screens and tasks the user will be able to access in the applications.
+  humanURL: https://developer.crunchtime.com/docs/introduction
+  baseURL: https://webservices.net-chef.com
+  tags:
+  - Application User Service
+  properties:
+  - type: OpenAPI
+    url: openapi/crunchtime-cruise-platform-openapi.yml
+  - type: JSONSchema
+    url: json-schema/crunchtime-vendor-get-dto-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-scheduled-batch-export-files-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-application-user-details-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-application-user-details-get-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-location-details-get-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-general-ledger-dto-schema.json
+- aid: crunchtime:crunchtime-inventory-labor
+  name: Crunchtime Application User Service API
+  description: The Application User service is used to create and retrieve user profiles where each user is assigned a unique User ID and password
+    for logging in to Enterprise Manager, Net-Chef, or the Teamworx Manager Console.   It links users to specific locations, hierarchies, customers
+    and markets, and assigns each user to a user group, which determines which screens and tasks the user will be able to access in the applications.
+  humanURL: https://developer.crunchtime.com/docs/introduction
+  baseURL: https://webservices.net-chef.com
+  tags:
+  - Application User Service
+  properties:
+  - type: OpenAPI
+    url: openapi/crunchtime-inventory-labor-openapi.yml
+  - type: JSONSchema
+    url: json-schema/crunchtime-employee-get-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-vendor-get-dto-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-purchase-order-header-dto-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-daily-prep-dto-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-scheduled-batch-export-files-schema.json
+  - type: JSONSchema
+    url: json-schema/crunchtime-application-user-details-schema.json
+
 x-enrichment:
   date: '2026-07-19'
   status: backfilled
   pass: local-v1
   note: backfilled from .gitignore signal + verified work evidence
+
+x-readme-harvest:
+  date: '2026-10-14'
+  ops: 168
+  tool: harvest-readme-openapi.py
+  portal: https://developer.crunchtime.com

@@ -1,15 +1,10 @@
 generated: '2026-07-18'
 method: searched
-source: >-
-  https://www.crunchtime.com/security (compliance posture) and the developer hub
-  docs (API conventions). Standards assertions are derived from documented
-  behavior; compliance certifications are searched from the security page.
-description: >-
-  Conformance posture for Crunchtime. The company publishes SOC 2 Type 2 audits
-  across all products and SOC 1 Type 2 audits for the Inventory and Labor
-  products. The Inventory & Labor API is a REST/JSON API using a token-based
-  auth model (no OAuth2/OIDC) and standard HTTP status codes (no RFC 9457
-  problem+json envelope).
+source: https://www.crunchtime.com/security (compliance posture) and the developer hub docs (API conventions). Standards assertions are derived
+  from documented behavior; compliance certifications are searched from the security page.
+description: Conformance posture for Crunchtime. The company publishes SOC 2 Type 2 audits across all products and SOC 1 Type 2 audits for the
+  Inventory and Labor products. The Inventory & Labor API is a REST/JSON API using a token-based auth model (no OAuth2/OIDC) and standard HTTP
+  status codes (no RFC 9457 problem+json envelope).
 compliance:
   published: true
   source: https://www.crunchtime.com/security
@@ -42,3 +37,12 @@ standards:
 - id: soc1-type2
   conforms: true
   evidence: SOC 1 Type 2 audits for Inventory and Labor products (security page).
+- id: openapi-3.0
+  conforms: true
+  evidence: the document declares 3.0.0
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
